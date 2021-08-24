@@ -10,7 +10,7 @@ var currentProductArray = [];
             for (let i = 0; i < array.length ; i++) {
                 let listado = array[i];
                 productos +='<h4>'+ listado.name +'</h4> </br> ';
-                productos += '<div style="text-align: left;"><img src="' + listado.imgSrc + '" class="img-thumbnail"> <p> Descripcion:'+ listado.description + '</p></div> </br></br>'; 
+                productos += '<div style="text-align: center;"><img src="' + listado.imgSrc + '" class="img-thumbnail"> <p> Descripcion:'+ listado.description + '</p></div> </br></br>'; 
                 productos += "Precio: " + listado.cost + " " + listado.currency + "<br><hr><br>";
             }
             document.getElementById("productos").innerHTML += productos;
