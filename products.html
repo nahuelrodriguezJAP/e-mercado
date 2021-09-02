@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <!-- saved from url=(0049)https://getbootstrap.com/docs/4.3/examples/album/ -->
 <html lang="en">
   <head>
@@ -21,6 +21,7 @@
         <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
         <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
         <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
+        <a class="py-2 d-none d-md-inline-block" id="" href="">Usuario</a>
       </div>
     </nav>
     <main role="main" >
@@ -29,6 +30,12 @@
         <h2 id="h2">Productos</h2>
         <br>
         <p class="lead" >Aquí verás todos los productos con mayor detalle: </p> 
+        <div id="filtro-precio" style="float: right;">
+          <input type="number" placeholder="Monto Mínimo"id="min">
+          <input type="number" placeholder="Monto Máximo" id="max">
+          <button id="filtrar" >Filtrar</button> <button id="limpiar">Limpiar</button>
+         
+        </div>
         <div id="productos" style="text-align: center;">
 
         </div>
