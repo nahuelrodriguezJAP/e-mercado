@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function(e){
             sortAndShowCategories(ORDER_ASC_BY_NAME, resultObj.data);
         }
     });
-
+console.log("a ver si llega acá")
     document.getElementById("sortAsc").addEventListener("click", function(){
         sortAndShowCategories(ORDER_ASC_BY_NAME);
     });
@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function(e){
     document.getElementById("sortDesc").addEventListener("click", function(){
         sortAndShowCategories(ORDER_DESC_BY_NAME);
     });
-
+    console.log("a ver si llega acá")
     document.getElementById("sortByCount").addEventListener("click", function(){
         sortAndShowCategories(ORDER_BY_PROD_COUNT);
     });
@@ -119,18 +119,19 @@ document.addEventListener("DOMContentLoaded", function(e){
 
         if ((minCount != undefined) && (minCount != "") && (parseInt(minCount)) >= 0){
             minCount = parseInt(minCount);
+            console.log("a ver si llega acá")
         }
         else{
             minCount = undefined;
         }
-
+        console.log("a ver si llega acá")
         if ((maxCount != undefined) && (maxCount != "") && (parseInt(maxCount)) >= 0){
             maxCount = parseInt(maxCount);
         }
         else{
             maxCount = undefined;
         }
-
+        console.log("a ver si llega acá")
         showCategoriesList();
     });
 });

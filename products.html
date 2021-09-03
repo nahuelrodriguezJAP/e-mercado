@@ -16,12 +16,12 @@
   <body>
     <nav class="site-header sticky-top py-1 bg-dark">
       <div class="container d-flex flex-column flex-md-row justify-content-between">
-        <a class="py-2 d-none d-md-inline-block" href="login.html">Inicio</a>
+        <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
         <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
         <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
         <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
         <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-        <a class="py-2 d-none d-md-inline-block" id="" href="">Usuario</a>
+        <a class="py-2 d-none d-md-inline-block" id="user" href="">Usuario Activo:</a>
       </div>
     </nav>
     <main role="main" >
@@ -31,12 +31,16 @@
         <br>
         <p class="lead" >Aquí verás todos los productos con mayor detalle: </p> 
         <div id="filtro-precio" style="float: right;">
-          <input type="number" placeholder="Monto Mínimo"id="min">
+          <input type="number" placeholder="Monto Mínimo"id="min"> 
           <input type="number" placeholder="Monto Máximo" id="max">
-          <button id="filtrar" >Filtrar</button> <button id="limpiar">Limpiar</button>
-         
+          <button id="filtrar" >Filtrar</button>
+          <button id="limpiar">Limpiar</button>
+          <button id="relevancia" >Ordenar por Relevancia</button> 
+          <button id="acendente">Por Precio $↑</button>
+          <button id="decendente">Por Precio $↓</button>
         </div>
-        <div id="productos" style="text-align: center;">
+        <br>
+        <div id="productos" style="text-align: center; float: inline-end;">
 
         </div>
 
