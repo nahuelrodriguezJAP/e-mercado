@@ -45,11 +45,12 @@ var getJSONData = function(url){
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function(e){
   let dato = localStorage.getItem('user');
+  
   let usuario = document.getElementById("user");
 
   if(dato){
-    dato = parseInt(dato);
-    usuario.innerText+= dato.value;
+    dato = JSON.parse(dato);
+    usuario.innerText = usuario.innerText + dato;
   }
   if(document.getElementById("salir")){
     document.getElementById("salir").addEventListener('click', function (e){

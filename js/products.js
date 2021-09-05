@@ -46,8 +46,8 @@ function showProductos() {
             ((max == undefined) || (max != undefined && parseInt(listado.cost) <= max))) {
 
             productos += '<h4>' + listado.name + '</h4> </br> ';
-            productos += '<div style="text-align: center;"><img src="' + listado.imgSrc + '" class="img-thumbnail"> <p> Descripcion:' + listado.description + '</p></div> </br></br>';
-            productos += "Precio: " + listado.cost + " " + listado.currency + "<br> Rango de ventas: " + listado.soldCount;
+            productos += '<div style="text-align: center;"><img src="' + listado.imgSrc + '" class="img-thumbnail"> <p> Descripcion:' + listado.description + '</p></div>';
+            productos += "Precio: " + listado.cost + " " + listado.currency + "<br> Rango de ventas: " + listado.soldCount + '<br><br><br>';
         }
 
     }
