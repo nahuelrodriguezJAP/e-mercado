@@ -4,7 +4,9 @@
 document.addEventListener("DOMContentLoaded", function (e) {
     document.getElementById("submit").addEventListener("click", function () {
         let usuario = document.getElementById("user").value;
-        localStorage.setItem('user',JSON.stringify(usuario.value));
-        window.location = 'index.html';
+
+        if(usuario !== ""){
+        localStorage.setItem('user',JSON.stringify(usuario));
+        }
     });   
 })

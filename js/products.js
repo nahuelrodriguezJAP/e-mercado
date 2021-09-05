@@ -12,8 +12,8 @@ function sortProductos(criteria, array) {
 
     if (criteria === acendente) {
         result = array.sort(function (a, b) {
-            if (a.cost < b.cost) { return -1; }
-            if (a.cost > b.cost) { return 1; }
+            if (a.cost > b.cost) { return -1; }
+            if (a.cost < b.cost) { return 1; }
             return 0;
         });
     }
@@ -66,6 +66,20 @@ function sortAndShowProductos(sortCriteria, productArray) {
     showProductos();
 }
 
+function serch(currentProductArray) {
+    document.getElementById("productos").innerHTML = '<br><hr><br>';
+    if (document.getElementById("buscador").value != "") {
+        currentProductArray.forEach(listado => {
+            if (listado.name.toLowerCase().indexOf(buscar) != -1) {
+            sortAndShowProductos(currentProductArray)
+            }
+        })
+    }
+    if(document.getElementById("buscador").value == "" ){
+        sortAndShowProductos(currentProductArray);
+    }
+}
+
 
 document.addEventListener("DOMContentLoaded", function (e) {
     getJSONData(PRODUCTS_URL).then(function (resultado) {
@@ -78,8 +92,10 @@ document.addEventListener("DOMContentLoaded", function (e) {
     document.getElementById("limpiar").addEventListener("click", function () {
         document.getElementById("min").value = "";
         document.getElementById("max").value = "";
+        document.getElementById("buscador").value = "";
         min = undefined;
         max = undefined;
+
 
         showProductos(currentProductArray);
     });
@@ -120,8 +136,11 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
         showProductos(currentProductArray);
     });
-
-
+    document.getElementById("buscador").addEventListener('input', function () {
+        buscar = document.getElementById("buscador").value;
+        serch(currentProductArray);
+        
+    })
 
 });
 
