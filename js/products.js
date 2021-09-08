@@ -45,7 +45,7 @@ function showProductos() {
         if (((min == undefined) || (min != undefined && parseInt(listado.cost) >= min)) &&
             ((max == undefined) || (max != undefined && parseInt(listado.cost) <= max))) {
 
-            productos += '<h4>' + listado.name + '</h4> </br> ';
+            productos += '<h4><button id"'+listado.name+'">' + listado.name + '</button></h4> </br> ';
             productos += '<div style="text-align: center;"><img src="' + listado.imgSrc + '" class="img-thumbnail"> <p> Descripcion:' + listado.description + '</p></div>';
             productos += "Precio: " + listado.cost + " " + listado.currency + "<br> Rango de ventas: " + listado.soldCount + '<br><br><br>';
         }
@@ -92,7 +92,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
     document.getElementById("limpiar").addEventListener("click", function () {
         document.getElementById("min").value = "";
         document.getElementById("max").value = "";
-        document.getElementById("buscador").value = "";
         min = undefined;
         max = undefined;
 
@@ -136,11 +135,14 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
         showProductos(currentProductArray);
     });
-    document.getElementById("buscador").addEventListener('input', function () {
-        buscar = document.getElementById("buscador").value;
-        serch(currentProductArray);
+    // document.getElementById("buscador").addEventListener('input', function () {
+    //     buscar = document.getElementById("buscador").value;
+    //     serch(currentProductArray);
         
-    })
+    // })
+    document.getElementById().addEventListener("click", function () {
+        window.location = 'mostrarProductos.html'
+    });
 
 });
 

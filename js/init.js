@@ -61,3 +61,6 @@ document.addEventListener("DOMContentLoaded", function(e){
 
 })
 
+function mostrarProducto(){
+  window.location = "mostrarProductos.html";
+};
