@@ -6,6 +6,12 @@ var currentSortCriteria = undefined;
 var min;
 var max;
 
+function guardarId(array){
+    localStorage.setItem("auto", array); 
+    window.location = "mostrarProductos.html";
+};
+
+
 
 function sortProductos(criteria, array) {
     let result = []
@@ -45,10 +51,10 @@ function showProductos() {
         if (((min == undefined) || (min != undefined && parseInt(listado.cost) >= min)) &&
             ((max == undefined) || (max != undefined && parseInt(listado.cost) <= max))) {
 
-            productos += '<a id="'+ listado.id +'" href="mostrarProductos.html"></br><h4>' + listado.name + '</h4> </br> ';
+            productos += '<button onclick="guardarId('+ listado.id +')"></br><h4>' + listado.name + '</h4> </br> ';
             productos += '<div style="text-align: center;"><img src="' + listado.imgSrc + '" class="img-thumbnail"> <p> Descripcion:' + listado.description + '</p></div>';
-            productos += "Precio: " + listado.cost + " " + listado.currency + "<br> Rango de ventas: " + listado.soldCount + '<br>';
-            productos += '</a> <br><br><hr>';
+            productos += "Precio: " + listado.cost + " " + listado.currency + "<br> Rango de ventas: " + listado.soldCount + '<br><br><hr>';
+
         }
 
     }
@@ -136,11 +142,12 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
         showProductos(currentProductArray);
     });
-    document.getElementById(currentProductArray.id).addEventListener("click", function(){
-        let id = document.getElementById(currentProductArray.id)
-        localStorage.setItem('id', JSON.stringify(id));
-        window.location="mostrarProductos.html";
-    })
+    
+    // document.getElementById(currentProductArray.id).addEventListener("click", function(){
+    //     let id = document.getElementById(currentProductArray.id)
+    //     localStorage.setItem('id', JSON.stringify(id));
+    //     window.location="mostrarProductos.html";
+    // })
     // document.getElementById("buscador").addEventListener('input', function () {
     //     buscar = document.getElementById("buscador").value;
     //     serch(currentProductArray);
@@ -148,9 +155,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
     // })
 
 });
-
-
-
 
 
 
