@@ -1,7 +1,7 @@
 var detalleProducto = [];
 
 
-function showMostrar(detalle){
+function showMostrar(detalle) {
     let info = "";
     let fotos = "";
 
@@ -23,16 +23,17 @@ function showMostrar(detalle){
 }
 
 document.addEventListener("DOMContentLoaded", function (e) {
-    getJSONData(PRODUCTS_INFO_URL + id + '.json').then(function (result) {
+    getJSONData(PRODUCT_INFO_URL + localStorage.getItem('auto') + ".json").then(function (result) {
         if (result.status === 'ok') {
-            result.data.forEach(detalle => {
-                if (detalle.id == localStorage.getItem('auto')) {
-                    detalle = detalleProducto;
-                    showMostrar(detalleProducto);
+            if (localStorage.getItem('auto') !== undefined) {
+                result.data.id.forEach(detalle => {
+                    let detalle=detalleProducto;
+                    showMostrar(detalle)
+                });
 
-                }
-
-            });
-        };
-    });
-});
+                
+            };
+        }
+    }
+    )
+})
