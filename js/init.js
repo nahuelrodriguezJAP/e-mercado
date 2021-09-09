@@ -2,7 +2,7 @@ const CATEGORIES_URL = "https://japdevdep.github.io/ecommerce-api/category/all.j
 const PUBLISH_PRODUCT_URL = "https://japdevdep.github.io/ecommerce-api/product/publish.json";
 const CATEGORY_INFO_URL = "https://japdevdep.github.io/ecommerce-api/category/1234.json";
 const PRODUCTS_URL = "https://japdevdep.github.io/ecommerce-api/product/all.json";
-const PRODUCT_INFO_URL = "https://japdevdep.github.io/ecommerce-api/product/5678.json";
+const PRODUCT_INFO_URL = "https://japdevdep.github.io/ecommerce-api/product/"
 const PRODUCT_INFO_COMMENTS_URL = "https://japdevdep.github.io/ecommerce-api/product/5678-comments.json";
 const CART_INFO_URL = "https://japdevdep.github.io/ecommerce-api/cart/987.json";
 const CART_BUY_URL = "https://japdevdep.github.io/ecommerce-api/cart/buy.json";
@@ -40,6 +40,14 @@ var getJSONData = function(url){
     });
 }
 
+function guardarId(result.id){
+  document.getElementById("1"||"2"||"3"||"4").addEventListener("click", function(){
+    localStorage.setItem("auto", result.id)
+
+  }{
+
+  }
+}
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
@@ -47,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function(e){
   let dato = localStorage.getItem('user');
   
   let usuario = document.getElementById("user");
-
+  
   if(dato){
     dato = JSON.parse(dato);
     usuario.innerText = usuario.innerText + dato;
@@ -58,9 +66,11 @@ document.addEventListener("DOMContentLoaded", function(e){
       window.location = 'login.html'
     })
   }
+  // document.getElementById().addEventListener('click',function(e){
+    
+  //   localStorage.setItem('auto',"Chevrolet Onix Joy");
+  // })
 
 })
 
-function mostrarProducto(){
-  window.location = "mostrarProductos.html";
-};
+

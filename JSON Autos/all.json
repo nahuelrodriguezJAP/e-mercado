@@ -1,0 +1,42 @@
+[
+    {
+        "id":"1",
+        "name": "Chevrolet Onix Joy",
+        "description": "Generación 2019, variedad de colores. Motor 1.0, ideal para ciudad.",
+        "descriptionAll": "Es un vehículo osado y singular en sus conceptos y sus líneas. Desde su llegada sorprendió por su diseño y funcionalidades. A su vez, sus molduras en las puertas y sus fenders le aportan robustez a su diseño sin quitarle elegancia. Mientras tanto, sus rieles portaequipaje en el techo le otorgan un look más agresivo con personalidad off road. Evo Way está listo para recorrer cualquier camino.",
+        "cost": 13500,
+        "currency": "USD",
+        "imgSrc": "img/prod1.jpg",
+        "soldCount": 14
+    },
+    {
+        "id":"2",
+        "name": "Fiat Way",
+        "description": "La versión de Fiat que brinda confort y a un precio accesible.",
+        "descriptionAll":"",
+        "cost": 14500,
+        "currency": "USD",
+        "imgSrc": "img/prod2.jpg",
+        "soldCount": 52
+    },
+    {
+        "id":"3",
+        "name": "Suzuki Celerio",
+        "description": "Un auto que se ha ganado la buena fama por su economía con el combustible.",
+        "descriptionAll":"Vive nuevas experiencias arriba de un auto que lo tiene todo: eficiencia de combustible, diseño y comodidad. Si buscas entretenimiento sin sacrificar rendimiento, Celerio es para vos.",
+        "cost": 12500,
+        "currency": "USD",
+        "imgSrc": "img/prod3.jpg",
+        "soldCount": 25
+    },
+    {
+        "id":"4",
+        "name": "Peugeot 208",
+        "description": "El modelo de auto que se sigue renovando y manteniendo su prestigio en comodidad.",
+        "descriptionAll":"Con un diseño con proporciones exactas que generan un vehículo dinámico y bien equilibrado, inspirado en el concept Fractal. El diseño delantero del vehículo adopta la nueva firma lumínica asemejándose a los colmillos de un león mientras que el nombre del modelo nuevamente está colocado en el frente con un diseño gráfico nuevo y moderno",
+        "cost": 15200,
+        "currency": "USD",
+        "imgSrc": "img/prod4.jpg",
+        "soldCount": 17
+    }
+]
