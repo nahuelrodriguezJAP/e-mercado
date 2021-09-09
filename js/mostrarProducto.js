@@ -23,7 +23,7 @@ function showMostrar(detalle){
 }
 
 document.addEventListener("DOMContentLoaded", function (e) {
-    getJSONData(PRODUCTS_URL + id + '.json').then(function (result) {
+    getJSONData(PRODUCTS_INFO_URL + id + '.json').then(function (result) {
         if (result.status === 'ok') {
             result.data.forEach(detalle => {
                 if (detalle.id == localStorage.getItem('auto')) {
