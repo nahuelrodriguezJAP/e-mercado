@@ -1,39 +1,52 @@
-var detalleProducto = [];
+var detalleProducto ="";
+var comentarios="";
 
-
-function showMostrar(detalle) {
+function showMostrar(detalleProducto) {
     let info = "";
-    let fotos = "";
-
+    let fotos = ` {
+        <img class="img" src="img/${localStorage.getItem('auto')}/prod1.jpg>",
+        <img class="img" src="img/${localStorage.getItem('auto')}/prod2.jpg>",  
+        <img class="img" src="img/${localStorage.getItem('auto')}/prod3.jpg>",
+        <img class="img" src="img/${localStorage.getItem('auto')}/prod4.jpg>"
+        <img class="img" src="img/${localStorage.getItem('auto')}/prod5.jpg>"    
+        }`
     info += `
-    <h2> <strong>${detalle.name} </strong></h2><br>
-    <p> ${detalle.descriptionAll} </p><br><p>${detalle.category}</p>
-    <div>${fotos}</div><br>
-    <p>Precio: ${detalle.cost} ${detalle.currency}  Productos Vendidos${detalle.soldCount}</p>
+    <br><br> 
+    <br><br><h2> <strong>${detalleProducto.name} </strong></h2><br>
+    <div id="fotos"><img class="img" src="${detalleProducto.images[0]}"><img class="img" src="${detalleProducto.images[1]}"><img class="img" src="${detalleProducto.images[2]}"><img class="img" src="${detalleProducto.images[3]}"><img class="img" src="${detalleProducto.images[4]}"></p> </div>
+    <p> ${detalleProducto.description} </p><br><p>${detalleProducto.category}</p><p>Precio: ${detalleProducto.cost} ${detalleProducto.currency}  Productos Vendidos${detalleProducto.soldCount}</p>
     `
-    fotos += ` 
-    <img class="img" src="img/${detalle.id}/prod1.jpg>"
-    <img class="img" src="img/${detalle.id}/prod2.jpg>"
-    <img class="img" src="img/${detalle.id}/prod3.jpg>"
-    <img class="img" src="img/${detalle.id}/prod4.jpg>"
-    <img class="img" src="img/${detalle.id}/prod5.jpg>"    
-    `
-
+    
+    console.log(detalleProducto)
     document.getElementById("contenido").innerHTML = info;
 }
 
-document.addEventListener("DOMContentLoaded", function (e) {
-    getJSONData(PRODUCT_INFO_URL + localStorage.getItem('auto') + ".json").then(function (result) {
-        if (result.status === 'ok') {
-            if (localStorage.getItem('auto') !== undefined) {
-                result.data.id.forEach(detalle => {
-                    let detalle=detalleProducto;
-                    showMostrar(detalle)
-                });
+function showComents(comments){
+    let comentarios = "<br><h2> Comentarios de Clientes: </h2><br>";
+    comentarios +=`
+    <p> ${comments.description} dice: ${comments.user} </p>
+    <p> Día: ${comments.dateTime} horas.</p>
+    `
 
-                
-            };
+    document.getElementById("comentarios").innerHTML+=comentarios;
+}
+
+document.addEventListener("DOMContentLoaded", function (e) {
+    getJSONData(PRODUCT_INFO_URL+localStorage.getItem('auto')+".json").then(function (result) {
+        if (result.status === 'ok') {
+            detalleProducto=result.data
+            showMostrar(detalleProducto);
+            
         }
-    }
-    )
+        
+    })
+    getJSONData(PRODUCT_INFO_COMMENTS_URL).then(function(result){
+        if(result.status=== 'ok'){ 
+            let comentarios=result.data;
+            showComents(comentarios);
+
+
+        }
+
+    })
 })
