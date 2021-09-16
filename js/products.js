@@ -51,9 +51,9 @@ function showProductos() {
         if (((min == undefined) || (min != undefined && parseInt(listado.cost) >= min)) &&
             ((max == undefined) || (max != undefined && parseInt(listado.cost) <= max))) {
 
-            productos += '<button onclick="guardarId('+ listado.id +')"></br><h4>' + listado.name + '</h4> </br> ';
+            productos += '<button class="rounded border border-secondary" id="productosMostrados" style="text-align: center;" onclick="guardarId('+ listado.id +')"></br><h4>' + listado.name + '</h4> </br> ';
             productos += '<div style="text-align: center;"><img src="' + listado.imgSrc + '" class="img-thumbnail"> <p> Descripcion:' + listado.description + '</p></div>';
-            productos += "Precio: " + listado.cost + " " + listado.currency + "<br> Rango de ventas: " + listado.soldCount + '<br><br><hr>';
+            productos += "Precio: " + listado.cost + " " + listado.currency + "<br> Rango de ventas: " + listado.soldCount + '</button><br><br><hr>';
 
         }
 

@@ -6,9 +6,42 @@ function showMostrar(detalleProducto) {
     info += `
     <br><br> 
     <br><br><h2> <strong>${detalleProducto.name} </strong></h2><br>
-    <div id="fotos"><img class="img" width="900" src="${detalleProducto.images[0]}"><img class="img"  width="900" src="${detalleProducto.images[1]}"><img class="img"  width="900" src="${detalleProducto.images[2]}"><img class="img"  width="900" src="${detalleProducto.images[3]}"><img class="img"  width="900" src="${detalleProducto.images[4]}"></p> </div>
+    <div class="slide">
+			<div class="slide-inner">
+				<input class="slide-open" type="radio" id="slide-1" name="slide" aria-hidden="true" hidden="" checked="checked">
+				<div class="slide-item">
+    <img class="img" width="100%" src="${detalleProducto.images[0]}"></div>
+    <input class="slide-open" type="radio" id="slide-2" name="slide" aria-hidden="true" hidden="">
+    <div class="slide-item"><img class="img"  width="100%" src="${detalleProducto.images[1]}"></div>
+    <input class="slide-open" type="radio" id="slide-3" name="slide" aria-hidden="true" hidden="">
+    <div class="slide-item"><img class="img"  width="100%" src="${detalleProducto.images[2]}"></div>
+    <input class="slide-open" type="radio" id="slide-4" name="slide" aria-hidden="true" hidden="">
+    <div class="slide-item"><img class="img"  width="100%" src="${detalleProducto.images[3]}"></div>
+    <input class="slide-open" type="radio" id="slide-5" name="slide" aria-hidden="true" hidden="">
+    <div class="slide-item"><img class="img" width="100%"  src="${detalleProducto.images[4]}"></div>     
+				<ol class="slide-indicador">
+					<li>
+						<label for="slide-1" class="slide-circulo">•</label>
+					</li>
+					<li>
+						<label for="slide-2" class="slide-circulo">•</label>
+					</li>
+					<li>
+						<label for="slide-3" class="slide-circulo">•</label>
+					</li>
+                    <li>
+						<label for="slide-4" class="slide-circulo">•</label>
+					</li>
+                    <li>
+						<label for="slide-5" class="slide-circulo">•</label>
+					</li>
+				</ol>
+			</div>
+		</div>
+    </div>
     <p> ${detalleProducto.description} </p><br><p>${detalleProducto.category}</p><p>Precio: ${detalleProducto.cost} ${detalleProducto.currency}  Productos Vendidos${detalleProducto.soldCount}</p>
     `
+
     document.getElementById("contenido").innerHTML = info;
 }
 
@@ -87,6 +120,7 @@ function showComents() {
     </div></p><br></div> 
     </div>
     `
+
         }
     }
 
