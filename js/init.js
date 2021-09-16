@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function(e){
     })
   }
   if(id !== ""){
-    showMostrar(id)
+    
     
 
   }

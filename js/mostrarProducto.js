@@ -6,7 +6,7 @@ function showMostrar(detalleProducto) {
     info += `
     <br><br> 
     <br><br><h2> <strong>${detalleProducto.name} </strong></h2><br>
-    <div id="fotos"><img class="img" width="720" src="${detalleProducto.images[00]}"><img class="img"  width="720" src="${detalleProducto.images[1]}"><img class="img"  width="720" src="${detalleProducto.images[2]}"><img class="img"  width="720" src="${detalleProducto.images[3]}"><img class="img"  width="720" src="${detalleProducto.images[4]}"></p> </div>
+    <div id="fotos"><img class="img" width="900" src="${detalleProducto.images[0]}"><img class="img"  width="900" src="${detalleProducto.images[1]}"><img class="img"  width="900" src="${detalleProducto.images[2]}"><img class="img"  width="900" src="${detalleProducto.images[3]}"><img class="img"  width="900" src="${detalleProducto.images[4]}"></p> </div>
     <p> ${detalleProducto.description} </p><br><p>${detalleProducto.category}</p><p>Precio: ${detalleProducto.cost} ${detalleProducto.currency}  Productos Vendidos${detalleProducto.soldCount}</p>
     `
     document.getElementById("contenido").innerHTML = info;
@@ -17,8 +17,10 @@ function showComents(){
     for (let i = 0; i < comentarios.length; i++) {
         let comments = comentarios[i];
     coments+=`
-    <p> ${comments.description} dice: ${comments.user} </p>
-    <p> Día: ${comments.dateTime} horas.</p>
+    <div>
+    <div id="cajacoment"><div><p> ${comments.description}</div><div> dice: ${comments.user} </p></div><div>
+    <div><p>El Día: ${comments.dateTime} horas.</p><br></div>
+    </div>
     `
     }
     document.getElementById("comentarios").innerHTML+=coments;
