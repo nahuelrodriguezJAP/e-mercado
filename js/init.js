@@ -53,6 +53,9 @@ document.addEventListener("DOMContentLoaded", function(e){
     dato = JSON.parse(dato);
     usuario.innerText = usuario.innerText + dato;
   }
+  if(dato===undefined){
+    usuario.innerHTML ='"<p>No hay usuario logeado, ingrese<a href="login.html">aquí</a></p>"'
+  }
   if(document.getElementById("salir")){
     document.getElementById("salir").addEventListener('click', function (e){
       localStorage.removeItem('user');
