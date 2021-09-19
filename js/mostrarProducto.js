@@ -19,23 +19,7 @@ function showMostrar(detalleProducto) {
     <div class="slide-item"><img class="img"  width="100%" src="${detalleProducto.images[3]}"></div>
     <input class="slide-open" type="radio" id="slide-5" name="slide" aria-hidden="true" hidden="">
     <div class="slide-item"><img class="img" width="100%"  src="${detalleProducto.images[4]}"></div>     
-				<ol class="slide-indicador">
-					<li>
-						<label for="slide-1" class="slide-circulo">•</label>
-					</li>
-					<li>
-						<label for="slide-2" class="slide-circulo">•</label>
-					</li>
-					<li>
-						<label for="slide-3" class="slide-circulo">•</label>
-					</li>
-                    <li>
-						<label for="slide-4" class="slide-circulo">•</label>
-					</li>
-                    <li>
-						<label for="slide-5" class="slide-circulo">•</label>
-					</li>
-				</ol>
+				
 			</div>
 		</div>
     </div>
