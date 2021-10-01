@@ -1,8 +1,10 @@
 var detalleProducto = "";
 var comentarios = [];
+var rec = "";
 
 function showMostrar(detalleProducto) {
     let info = "";
+    let product = "";
     info += `
     <br><br> 
     <br><br><h2> <strong>${detalleProducto.name} </strong></h2><br>
@@ -19,16 +21,33 @@ function showMostrar(detalleProducto) {
     <div class="slide-item"><img class="img"  width="100%" src="${detalleProducto.images[3]}"></div>
     <input class="slide-open" type="radio" id="slide-5" name="slide" aria-hidden="true" hidden="">
     <div class="slide-item"><img class="img" width="100%"  src="${detalleProducto.images[4]}"></div>     
-				
+  
+    <ol class="slide-indicador">
+        <li>
+            <label for="slide-1" class="slide-circulo">•</label>
+        </li>
+        <li>
+            <label for="slide-2" class="slide-circulo">•</label>
+        </li>
+        <li>
+            <label for="slide-3" class="slide-circulo">•</label>
+        </li>
+        <li>
+        <label for="slide-4" class="slide-circulo">•</label>
+        </li>
+    <li>
+    <label for="slide-5" class="slide-circulo">•</label>
+</li>
+    </ol>
 			</div>
 		</div>
     </div>
     <p> ${detalleProducto.description} </p><br><p>${detalleProducto.category}</p><p>Precio: ${detalleProducto.cost} ${detalleProducto.currency}  Productos Vendidos${detalleProducto.soldCount}</p>
     `
 
+
     document.getElementById("contenido").innerHTML = info;
 }
-
 function estrellas() {
     if (comments.score === 1) {
         document.getElementById("star").innerHTML = `
@@ -58,7 +77,7 @@ function estrellas() {
 }
 
 function showComents() {
-    let estrellas = []
+
     let coments = "<br><h3> Comentarios de Clientes: </h3><br>";
     for (let i = 0; i < comentarios.length; i++) {
         let comments = comentarios[i];
@@ -118,6 +137,8 @@ document.addEventListener("DOMContentLoaded", function (e) {
         if (result.status === 'ok') {
             detalleProducto = result.data
             showMostrar(detalleProducto);
+            detalleProducto.relatedProducts = recomendados;
+
 
         }
 
@@ -127,8 +148,22 @@ document.addEventListener("DOMContentLoaded", function (e) {
             comentarios = result.data;
             showComents(comentarios);
 
-
+        }
+    })
+    getJSONData(PRODUCTS_URL).then(function (result) {
+        if (result.status === 'ok') {
+            let products = ' ';
+            product = result.data;
+            products += `<div class="container"><div class="row"><div class="col">
+        <strong>${product[detalleProducto.relatedProducts[0]].name}</strong><br>
+        <img src="${product[detalleProducto.relatedProducts[0]].imgSrc}" class="img-thumbnail"></img>
+        </div><div class="col">
+        <strong>${product[detalleProducto.relatedProducts[1]].name}</strong><br>
+        <img src="${product[detalleProducto.relatedProducts[1]].imgSrc}" class="img-thumbnail"></img>
+        </div></div></div>`
+            document.getElementById("relacionados").innerHTML += products;
         }
 
     })
+
 })
