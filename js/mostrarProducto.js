@@ -141,13 +141,13 @@ document.addEventListener("DOMContentLoaded", function (e) {
                 if (result.status === 'ok') {
                     let products = ' ';
                     product = result.data;
-                    products += `<div class="container"><div class="row "><div class="col">
+                    products += `<div class="container"><div class="row"><div class="col-auto">
                 <strong>${product[detalleProducto.relatedProducts[0]].name}</strong><br>
                 <img src="${product[detalleProducto.relatedProducts[0]].imgSrc}" class="img-thumbnail"></img>
                 </div><div class="col">
                 <strong>${product[detalleProducto.relatedProducts[1]].name}</strong><br>
                 <img src="${product[detalleProducto.relatedProducts[1]].imgSrc}" class="img-thumbnail"></img>
-                </div></div><div class="col align-self-end"><a href="products.html">Ver más</a></div></div>`
+                </div></div><div class="col align-self-end"><a href="products.html  ">Ver más</a></div></div>`
                     document.getElementById("relacionados").innerHTML += products;
                 }
         

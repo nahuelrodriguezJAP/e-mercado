@@ -39,7 +39,7 @@ var getJSONData = function(url){
         result.status = 'error';
         result.data = error;
         hideSpinner();
-        return result;
+        return alert(result) ;
     });
 }
 
@@ -51,7 +51,9 @@ document.addEventListener("DOMContentLoaded", function(e){
   let dato = localStorage.getItem('user');
   let id = localStorage.getItem('auto');
   let usuario = document.getElementById("user");
-  
+  if(!dato){
+    window.location = 'login.html';
+  }
   if(dato){
     dato = JSON.parse(dato);
     usuario.innerText = usuario.innerText + dato;

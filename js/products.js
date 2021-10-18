@@ -6,8 +6,8 @@ var currentSortCriteria = undefined;
 var min;
 var max;
 
-function guardarId(array){
-    localStorage.setItem("auto", array); 
+function guardarId(array) {
+    localStorage.setItem("auto", array);
     window.location = "mostrarProductos.html";
 };
 
@@ -51,7 +51,7 @@ function showProductos() {
         if (((min == undefined) || (min != undefined && parseInt(listado.cost) >= min)) &&
             ((max == undefined) || (max != undefined && parseInt(listado.cost) <= max))) {
 
-            productos += '<div class="container"><button class="rounded border border-secondary" id="productosMostrados" style="text-align: center;" onclick="guardarId('+ listado.id +')"></br><h4>' + listado.name + '</h4> </br> <div style="text-align: center;"><img src="' + listado.imgSrc + '" class="img-thumbnail"> <p> Descripcion:' + listado.description + '</p></div>Precio: ' + listado.cost + ' ' + listado.currency + '<br> Rango de ventas: ' + listado.soldCount + '</button><br><br><hr></div><br>';
+            productos += '<div class="container"><button class="rounded border border-secondary" id="productosMostrados" style="text-align: center;" onclick="guardarId(' + listado.id + ')"></br><h4>' + listado.name + '</h4> </br> <div style="text-align: center;"><img src="' + listado.imgSrc + '" class="img-thumbnail"> <p> Descripcion:' + listado.description + '</p></div>Precio: ' + listado.cost + ' ' + listado.currency + '<br> Rango de ventas: ' + listado.soldCount + '</button><br><br><hr></div><br>';
 
         }
 
@@ -76,11 +76,11 @@ function serch(currentProductArray) {
     if (document.getElementById("buscador").value != "") {
         currentProductArray.forEach(listado => {
             if (listado.name.toLowerCase().indexOf(buscar) != -1) {
-            sortAndShowProductos(currentProductArray)
+                sortAndShowProductos(currentProductArray)
             }
         })
     }
-    if(document.getElementById("buscador").value == "" ){
+    if (document.getElementById("buscador").value == "") {
         sortAndShowProductos(currentProductArray);
     }
 }
@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
         showProductos(currentProductArray);
     });
-    
+
     // document.getElementById(currentProductArray.id).addEventListener("click", function(){
     //     let id = document.getElementById(currentProductArray.id)
     //     localStorage.setItem('id', JSON.stringify(id));
@@ -149,7 +149,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
     // document.getElementById("buscador").addEventListener('input', function () {
     //     buscar = document.getElementById("buscador").value;
     //     serch(currentProductArray);
-        
+
     // })
 
 });
