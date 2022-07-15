@@ -5,7 +5,7 @@
     "ancho":"",
     "largo":"",
     "descripcion":"",
-    "img":"1",
+    "img":"1.jpg",
     "precio":"149USD"
 },{
     "nombre":"Estantería",
@@ -14,7 +14,7 @@
     "ancho":"",
     "largo":"",
     "descripcion":"",
-    "img":"2",
+    "img":"2.jpg",
     "precio":"109USD"
 },{
     "nombre":"Mesa Ratona Combinada",
@@ -23,7 +23,7 @@
     "ancho":"",
     "largo":"",
     "descripcion":"",
-    "img":"3",
+    "img":"3.jpg",
     "precio":"135USD"
 },{
     "nombre":"Escritorio",
@@ -32,7 +32,7 @@
     "ancho":"",
     "largo":"",
     "descripcion":"",
-    "img":"4",
+    "img":"4.jpg",
     "precio":"225USD"
 },{
     "nombre":"Mesa Ratona 90% Hierro",
@@ -41,6 +41,6 @@
     "ancho":"",
     "largo":"",
     "descripcion":"",
-    "img":"5",
+    "img":"5.jpg",
     "precio":"359USD"
 }]
