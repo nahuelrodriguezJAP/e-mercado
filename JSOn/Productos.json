@@ -1,0 +1,46 @@
+[{
+    "nombre":"Rack Para TV",
+    "categoria":"Living",
+    "altura": "",
+    "ancho":"",
+    "largo":"",
+    "descripcion":"",
+    "img":"1",
+    "precio":"149USD"
+},{
+    "nombre":"Estantería",
+    "categoria":["Living","Cocina","Baño","Dormitorio"],
+    "altura": "",
+    "ancho":"",
+    "largo":"",
+    "descripcion":"",
+    "img":"2",
+    "precio":"109USD"
+},{
+    "nombre":"Mesa Ratona Combinada",
+    "categoria":"Living",
+    "altura": "",
+    "ancho":"",
+    "largo":"",
+    "descripcion":"",
+    "img":"3",
+    "precio":"135USD"
+},{
+    "nombre":"Escritorio",
+    "categoria":["Living","Dormitorio"],
+    "altura": "",
+    "ancho":"",
+    "largo":"",
+    "descripcion":"",
+    "img":"4",
+    "precio":"225USD"
+},{
+    "nombre":"Mesa Ratona 90% Hierro",
+    "categoria":"Living",
+    "altura": "",
+    "ancho":"",
+    "largo":"",
+    "descripcion":"",
+    "img":"5",
+    "precio":"359USD"
+}]
