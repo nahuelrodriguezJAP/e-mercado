@@ -1,0 +1,9 @@
+[{
+    "Baño":true,
+    "Cocina":true,
+    "Living":true,
+    "Comedor":true,
+    "Estar":true,
+    "Intermedios":false,
+    "Exterior":false
+}]
