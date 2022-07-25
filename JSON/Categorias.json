@@ -1,9 +1,32 @@
-[{
-    "Baño":true,
-    "Cocina":true,
-    "Living":true,
-    "Comedor":true,
-    "Estar":true,
-    "Intermedios":false,
-    "Exterior":false
-}]
+[
+    {
+        "0": {
+            "id": 0,
+            "Baño": true
+        },
+        "1": {
+            "id": 1,
+            "Cocina": true
+        },
+        "2": {
+            "id": 2,
+            "Living": true
+        },
+        "3": {
+            "id": 3,
+            "Comedor": true
+        },
+        "4": {
+            "id": 4,
+            "Estar": true
+        },
+        "5": {
+            "id": 5,
+            "Intermedios": false
+        },
+        "6": {
+            "id": 6,
+            "Exterior": false
+        }
+    }
+]
