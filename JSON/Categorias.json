@@ -1,30 +1,30 @@
 [
     {
-        "0": {
+        "Cat": {
             "id": 0,
             "Baño": true
         },
-        "1": {
+        "Cat": {
             "id": 1,
             "Cocina": true
         },
-        "2": {
+        "Cat": {
             "id": 2,
             "Living": true
         },
-        "3": {
+        "Cat": {
             "id": 3,
             "Comedor": true
         },
-        "4": {
+        "Cat": {
             "id": 4,
             "Estar": true
         },
-        "5": {
+        "Cat": {
             "id": 5,
             "Intermedios": false
         },
-        "6": {
+        "Cat": {
             "id": 6,
             "Exterior": false
         }
