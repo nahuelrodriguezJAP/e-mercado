@@ -12,7 +12,7 @@
         "id": "1",
         "nombre": "Estantería",
         "detalle": "Varios diseños y colores. Calidad Superior y Garantia por 1 a'o",
-        "categoria":["Living","Cocina","Baño","Dormitorio"],
+        "categoria":"Living",
         "img": "src/components/img/Products/2.jpg",
         "precio": "109USD",
         "stock": "3"
@@ -30,7 +30,7 @@
         "id": "3",
         "nombre": "Escritorio",
         "detalle": "Varios diseños y colores. Calidad Superior y Garantia por 1 a'o",
-        "categoria":["Living","Dormitorio"],
+        "categoria":"Dormitorio",
         "img": "src/components/img/Products/4.jpg",
         "precio": "225USD",
         "stock": "6"
