@@ -2,30 +2,30 @@
     "nombre":"Rack Para TV",
     "categoria":"Living",
     "detalle":"Varios diseños y colores. Calidad Superior y Garantia por 1 a'o",
-    "img":"1.jpg",
+    "img":"src/components/img/Products/1.jpg",
     "precio":"149USD"
 },{"id":"1",
     "nombre":"Estantería",
     "categoria":["Living","Cocina","Baño","Dormitorio"],
     "detalle":"Varios diseños y colores. Calidad Superior y Garantia por 1 a'o",
-    "img":"2.jpg",
+    "img":"src/components/img/Products/2.jpg",
     "precio":"109USD"
 },{"id":"2",
     "nombre":"Mesa Ratona Combinada",
     "categoria":"Living",
     "detalle":"Varios diseños y colores. Calidad Superior y Garantia por 1 a'o",
-    "img":"3.jpg",
+    "img":"src/components/img/Products/3.jpg",
     "precio":"135USD"
 },{"id":"3",
     "nombre":"Escritorio",
     "categoria":["Living","Dormitorio"],
     "detalle":"Varios diseños y colores. Calidad Superior y Garantia por 1 a'o",
-    "img":"4.jpg",
+    "img":"src/components/img/Products/4.jpg",
     "precio":"225USD"
 },{"id":"4",
     "nombre":"Mesa Ratona 90% Hierro",
     "categoria":"Living",
     "detalle":"Varios diseños y colores. Calidad Superior y Garantia por 1 a'o",
-    "img":"5.jpg",
+    "img":"src/components/img/Products/5.jpg",
     "precio":"359USD"
 }]
