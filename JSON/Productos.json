@@ -8,7 +8,7 @@
 },
     {"id":"1",
     "nombre":"Estantería",
-    "categoria":["Living","Cocina","Baño","Dormitorio"],
+    "categoria":"Living",
     "descripcion":"",
     "img":"https://nahuelrodriguezjap.github.io/proyect-desing-rodriguez/src/components/img/Products/2.jpg",
     "precio":"109USD"
@@ -22,7 +22,7 @@
 },
     {"id":"3",
     "nombre":"Escritorio",
-    "categoria":["Living","Dormitorio"],
+    "categoria":"Dormitorio",
     "descripcion":"",
     "img":"https://nahuelrodriguezjap.github.io/proyect-desing-rodriguez/src/components/img/Products/4.jpg",
     "precio":"225USD"
